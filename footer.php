@@ -2,7 +2,7 @@
 
     </footer>
     <?php wp_footer(); ?>
-    <?php get_template_part('script'); ?>
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/./assets/javascript/main.js">
 </body>
 
 </html>
