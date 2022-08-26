@@ -1,21 +1,23 @@
 <?php
-// 投稿メニュー非表示
-add_action( 'admin_menu', 'remove_menus' );
+// 投稿メニュー非表示処理
 function remove_menus(){
-  remove_menu_page( 'edit.php' ); //投稿メニュー
-  remove_menu_page( 'upload.php' ); //メディア
+	remove_menu_page( 'edit.php' );		// 投稿メニュー
+	remove_menu_page( 'upload.php' );	// メディア
 }
+// remove_menus()呼び出し
+add_action( 'admin_menu', 'remove_menus' );
 
-function add_css_js() {//関数名add_css_js()を作成
-	//CSSの読み込みはここから
-	wp_enqueue_style('reset', get_template_directory_uri().'/assets/css/reset.css');
-	wp_enqueue_style('style',get_template_directory_uri().'/assets/css/style.css' );
-
-	//JavaScriptの読み込みはここから
-	wp_enqueue_script('main', get_template_directory_uri().'/assets/javascript/main.js');
+// functions.phpからのCSSの読み込み処理
+function add_css_js() {
+	// CSSの読み込み
+	wp_enqueue_style('reset', get_template_directory_uri().'/assets/css/reset.css');	// リセットcss読み込み
+	wp_enqueue_style('style',get_template_directory_uri().'/assets/css/style.css' );	// メインのcss読み込み
 	
+	// JavaScriptの読み込み
+	wp_enqueue_script('main', get_template_directory_uri().'/assets/javascript/main.js');	// メインJavaScriptの読み込み
 }
-//関数名add_scripts()を表側で呼び出す
+
+// add_scripts()呼び出し
 add_action('wp_enqueue_scripts', 'add_css_js');
 
 /* カスタム投稿 */
