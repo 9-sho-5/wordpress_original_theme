@@ -13,8 +13,11 @@ function add_css_js() {
 	wp_enqueue_style('reset', get_template_directory_uri().'/assets/css/reset.css');	// リセットcss読み込み
 	wp_enqueue_style('style',get_template_directory_uri().'/assets/css/style.css' );	// メインのcss読み込み
 	
-	// JavaScriptの読み込み
-	wp_enqueue_script('main', get_template_directory_uri().'/assets/javascript/main.js');	// メインJavaScriptの読み込み
+	/*
+		JavaScriptの読み込み
+		JavaScriptの処理によってDOMの読み込んでからの処理が望ましい場合があるため、footer.php末に記述している
+	*/
+	// wp_enqueue_script('main', get_template_directory_uri().'/assets/javascript/main.js');	// メインJavaScriptの読み込み
 }
 
 // add_scripts()呼び出し
