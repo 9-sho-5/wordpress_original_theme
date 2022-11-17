@@ -1,4 +1,14 @@
-@mixin mq($breakpoint: md) {
+@mixin lg($breakpoint: lg) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+@mixin md($breakpoint: md) {
+    @media #{map-get($breakpoints, $breakpoint)} {
+        @content;
+    }
+}
+@mixin sm($breakpoint: sm) {
     @media #{map-get($breakpoints, $breakpoint)} {
         @content;
     }
@@ -18,113 +28,53 @@ $mpvals: "0", "5", "10", "15", "20", "25", "30", "35", "40", "45", "50", "55", "
 $fontvals: "12", "14", "15", "16", "17", "18", "19", "20", "21","22", "24", "25", "26", "28", "30", "32", "34", "36", "38", "40", "42", "44",
 "46", "48", "50";
 @each $mpval in $mpvals {
-.mt-#{$mpval} {
-    margin-top: #{$mpval}px !important;
-}
-.mb-#{$mpval} {
-    margin-bottom: #{$mpval}px !important;
-}
-.ml-#{$mpval} {
-    margin-left: #{$mpval}px !important;
-}
-.mr-#{$mpval} {
-    margin-right: #{$mpval}px !important;
-}
-.mx-#{$mpval} {
-    margin-right: #{$mpval}px !important;
-    margin-left: #{$mpval}px !important;
-}
-.my-#{$mpval} {
-    margin-top: #{$mpval}px !important;
-    margin-bottom: #{$mpval}px !important;
-}
-.m-#{$mpval} {
-    margin-top: #{$mpval}px !important;
-    margin-bottom: #{$mpval}px !important;
-    margin-right: #{$mpval}px !important;
-    margin-left: #{$mpval}px !important;
-}
-.pt-#{$mpval} {
-    padding-top: #{$mpval}px !important;
-}
-.pb-#{$mpval} {
-    padding-bottom: #{$mpval}px !important;
-}
-.pl-#{$mpval} {
-    padding-left: #{$mpval}px !important;
-}
-.pr-#{$mpval} {
-    padding-right: #{$mpval}px !important;
-}
-.px-#{$mpval} {
-    padding-right: #{$mpval}px !important;
-    padding-left: #{$mpval}px !important;
-}
-.py-#{$mpval} {
-    padding-top: #{$mpval}px !important;
-    padding-bottom: #{$mpval}px !important;
-}
-.p-#{$mpval} {
-    padding-top: #{$mpval}px !important;
-    padding-bottom: #{$mpval}px !important;
-    padding-right: #{$mpval}px !important;
-    padding-left: #{$mpval}px !important;
-}
-}
-@each $fontval in $fontvals {
-.fs-#{$fontval} {
-    font-size: #{$fontval}px !important;
-}
-}
-@include mq() {
-@each $mpval in $mpvals {
-    .mt-sp-#{$mpval} {
+    .mt-#{$mpval} {
         margin-top: #{$mpval}px !important;
     }
-    .mb-sp-#{$mpval} {
+    .mb-#{$mpval} {
         margin-bottom: #{$mpval}px !important;
     }
-    .ml-sp-#{$mpval} {
+    .ml-#{$mpval} {
         margin-left: #{$mpval}px !important;
     }
-    .mr-sp-#{$mpval} {
+    .mr-#{$mpval} {
         margin-right: #{$mpval}px !important;
     }
-    .mx-sp-#{$mpval} {
+    .mx-#{$mpval} {
         margin-right: #{$mpval}px !important;
         margin-left: #{$mpval}px !important;
     }
-    .my-sp-#{$mpval} {
+    .my-#{$mpval} {
         margin-top: #{$mpval}px !important;
         margin-bottom: #{$mpval}px !important;
     }
-    .m-sp-#{$mpval} {
+    .m-#{$mpval} {
         margin-top: #{$mpval}px !important;
         margin-bottom: #{$mpval}px !important;
         margin-right: #{$mpval}px !important;
         margin-left: #{$mpval}px !important;
     }
-    .pt-sp-#{$mpval} {
+    .pt-#{$mpval} {
         padding-top: #{$mpval}px !important;
     }
-    .pb-sp-#{$mpval} {
+    .pb-#{$mpval} {
         padding-bottom: #{$mpval}px !important;
     }
-    .pl-sp-#{$mpval} {
+    .pl-#{$mpval} {
         padding-left: #{$mpval}px !important;
     }
-    .pr-sp-#{$mpval} {
+    .pr-#{$mpval} {
         padding-right: #{$mpval}px !important;
     }
-    .px-sp-#{$mpval} {
+    .px-#{$mpval} {
         padding-right: #{$mpval}px !important;
         padding-left: #{$mpval}px !important;
     }
-    .py-sp-#{$mpval} {
+    .py-#{$mpval} {
         padding-top: #{$mpval}px !important;
         padding-bottom: #{$mpval}px !important;
     }
-    .p-sp-#{$mpval} {
+    .p-#{$mpval} {
         padding-top: #{$mpval}px !important;
         padding-bottom: #{$mpval}px !important;
         padding-right: #{$mpval}px !important;
@@ -132,8 +82,190 @@ $fontvals: "12", "14", "15", "16", "17", "18", "19", "20", "21","22", "24", "25"
     }
 }
 @each $fontval in $fontvals {
-    .fs-sp-#{$fontval} {
+    .fs-#{$fontval} {
         font-size: #{$fontval}px !important;
     }
 }
+@include lg() {
+    @each $mpval in $mpvals {
+        .mt-lg-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+        }
+        .mb-lg-#{$mpval} {
+            margin-bottom: #{$mpval}px !important;
+        }
+        .ml-lg-#{$mpval} {
+            margin-left: #{$mpval}px !important;
+        }
+        .mr-lg-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+        }
+        .mx-lg-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .my-lg-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+        }
+        .m-lg-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .pt-lg-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+        }
+        .pb-lg-#{$mpval} {
+            padding-bottom: #{$mpval}px !important;
+        }
+        .pl-lg-#{$mpval} {
+            padding-left: #{$mpval}px !important;
+        }
+        .pr-lg-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+        }
+        .px-lg-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+        .py-lg-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+        }
+        .p-lg-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+    }
+    @each $fontval in $fontvals {
+        .fs-lg-#{$fontval} {
+            font-size: #{$fontval}px !important;
+        }
+    }
+}
+@include md() {
+    @each $mpval in $mpvals {
+        .mt-md-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+        }
+        .mb-md-#{$mpval} {
+            margin-bottom: #{$mpval}px !important;
+        }
+        .ml-md-#{$mpval} {
+            margin-left: #{$mpval}px !important;
+        }
+        .mr-md-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+        }
+        .mx-md-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .my-md-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+        }
+        .m-md-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .pt-md-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+        }
+        .pb-md-#{$mpval} {
+            padding-bottom: #{$mpval}px !important;
+        }
+        .pl-md-#{$mpval} {
+            padding-left: #{$mpval}px !important;
+        }
+        .pr-md-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+        }
+        .px-md-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+        .py-md-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+        }
+        .p-md-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+    }
+    @each $fontval in $fontvals {
+        .fs-md-#{$fontval} {
+            font-size: #{$fontval}px !important;
+        }
+    }
+}
+@include sm() {
+    @each $mpval in $mpvals {
+        .mt-sp-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+        }
+        .mb-sp-#{$mpval} {
+            margin-bottom: #{$mpval}px !important;
+        }
+        .ml-sp-#{$mpval} {
+            margin-left: #{$mpval}px !important;
+        }
+        .mr-sp-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+        }
+        .mx-sp-#{$mpval} {
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .my-sp-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+        }
+        .m-sp-#{$mpval} {
+            margin-top: #{$mpval}px !important;
+            margin-bottom: #{$mpval}px !important;
+            margin-right: #{$mpval}px !important;
+            margin-left: #{$mpval}px !important;
+        }
+        .pt-sp-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+        }
+        .pb-sp-#{$mpval} {
+            padding-bottom: #{$mpval}px !important;
+        }
+        .pl-sp-#{$mpval} {
+            padding-left: #{$mpval}px !important;
+        }
+        .pr-sp-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+        }
+        .px-sp-#{$mpval} {
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+        .py-sp-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+        }
+        .p-sp-#{$mpval} {
+            padding-top: #{$mpval}px !important;
+            padding-bottom: #{$mpval}px !important;
+            padding-right: #{$mpval}px !important;
+            padding-left: #{$mpval}px !important;
+        }
+    }
+    @each $fontval in $fontvals {
+        .fs-sp-#{$fontval} {
+            font-size: #{$fontval}px !important;
+        }
+    }
 }
