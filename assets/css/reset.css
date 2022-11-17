@@ -55,11 +55,7 @@ button:focus {
     outline: 0;
 }
 
-.main {
-    margin: auto;
-}
-
 .screen-reader-text{
     display:none;
-  }
+}
   
