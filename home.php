@@ -9,7 +9,7 @@ Template Name: メインページ
 <? get_header(); ?>
 
 <main>
-
+    <h1 style="position: relative; top: 50%; left: 50%; transform: translateX(-50%); display: block; width: 100vw; height: 100vh; text-align: center; line-height: 100vh;">Ready to Start!</h1>
 </main>
 
 <!-- footer.phpの読み込み -->
