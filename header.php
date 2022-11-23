@@ -23,4 +23,6 @@
 </head>
 <body>
 
-<?php get_template_part('nav_bar'); ?>
+<header>
+    <?php get_template_part('navigation_bar'); ?>
+</header>
