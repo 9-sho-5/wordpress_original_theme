@@ -1,4 +1,9 @@
 @use './header';
 @use './main';
 @use './footer';
-@use "./spacer";
+@use './spacer';
+
+/* 
+    テンプレート スタイルシート
+*/
+@use './template-post'

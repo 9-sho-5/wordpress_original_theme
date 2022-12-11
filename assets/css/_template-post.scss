@@ -1,0 +1,24 @@
+.news_wrap{
+    width: 70%;
+    margin: 0 auto;
+}
+
+.news_item{
+    p{
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+
+        font-size: 16px;
+    
+        /*IE対策*/
+        line-height: 1.5em;
+        max-height: 4.5em;
+    }
+}
+
+.cat{
+    padding: 5px 15px;
+    background-color: skyblue;
+}

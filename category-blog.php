@@ -24,13 +24,18 @@ Template Name: 投稿 blog 一覧 ページ
             if ( $the_query->have_posts() ) :
             ?>
             <!-- ループ前の開始タグ -->
-            <div class="news_wrap">
+            <div class="news_wrap mt-100">
                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <!-- 出力したい処理を記述 -->
-                    <div class="news_item mb-15" style="border: 1px solid black;">
-                        <p class="title">ニュースタイトル:：<?php the_title(); ?></p>
-                        <p>記事内容：<?php the_content(); ?></p>
-                        <a href="<?php echo get_permalink(); ?>">詳細ページリンク</a>
+                    <div class="news_item mb-15 py-30" style="border-top: 1px solid black;">
+                        <a href="<?php echo get_permalink(); ?>">
+                            <span class="fs-16 mr-15"><?php the_time('Y.m.d'); ?></span>
+                            <span class="fs-12 cat"><?php $cat = get_the_category(); $cat = $cat[0]; { echo $cat->cat_name; } ?></span>
+                            <p class="title my-15 fs-18"><?php the_title(); ?></p>
+                            <?#php pタグの挿入禁止 ?>
+                            <?php remove_filter ('the_content', 'wpautop'); ?>
+                            <?php the_content(); ?>
+                        </a>
                     </div>
                 <?php endwhile; ?>
             </div>
