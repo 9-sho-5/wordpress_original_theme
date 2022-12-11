@@ -13,6 +13,7 @@ Template Name: news 一覧 ページ
         <!--メイン-->
         <main class="main_contents">
 
+            <?#php 投稿の取得設定 ?>
             <?php
             $args = array(
                 'post_type' => 'post',
@@ -29,6 +30,7 @@ Template Name: news 一覧 ページ
                     <div class="news_item mb-15" style="border: 1px solid black;">
                         <p class="title">ニュースタイトル:：<?php the_title(); ?></p>
                         <p>記事内容：<?php the_content(); ?></p>
+                        <a href="<?php echo get_permalink(); ?>">詳細ページリンク</a>
                     </div>
                 </div>
             <?php endwhile; ?>
