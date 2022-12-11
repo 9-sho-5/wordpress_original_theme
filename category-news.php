@@ -12,19 +12,30 @@ Template Name: news 一覧 ページ
     <div class="wrapper">
         <!--メイン-->
         <main class="main_contents">
-        <?php if (have_posts()): ?>
-            <?php while(have_posts()) : the_post();?>
-            <div class="archive_item">
-                <!--カテゴリー記事一覧をパーツ化して読み込み-->
-                <?php get_template_part('template-parts/loop'); ?>
-            </div>
+
+            <?php
+            $args = array(
+                'post_type' => 'post',
+                'category_name' => 'news',
+                'posts_per_page' => 3
+            );
+            $the_query = new WP_Query( $args );
+            if ( $the_query->have_posts() ) :
+            ?>
+            <!-- ループ前の開始タグ -->
+            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <!-- 出力したい処理を記述 -->
+                <div class="news_wrap">
+                    <div class="news_item mb-15" style="border: 1px solid black;">
+                        <p class="title">ニュースタイトル:：<?php the_title(); ?></p>
+                        <p>記事内容：<?php the_content(); ?></p>
+                    </div>
+                </div>
             <?php endwhile; ?>
-        <?php endif; ?>
+            <!-- ループ後の閉じタグ -->
+            <?php endif; wp_reset_postdata(); ?>
+
         </main>
-        <!--サイドバー-->
-        <div class="sidebar">
-            <?php get_sidebar(); ?>
-        </div>
     </div>
 </main>
 
