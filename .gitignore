@@ -3,5 +3,5 @@
 # css map
 *.map
 
-# wp_how_to
-wp_how_to.tx
+# css min
+*.min.css
