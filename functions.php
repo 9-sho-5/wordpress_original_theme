@@ -27,18 +27,21 @@ add_action('wp_enqueue_scripts', 'add_css_js');
 add_action( 'init', 'create_post_type' );
 function create_post_type() {
   register_post_type(
-    'news',
+    'news',	// カスタム投稿名
     array(
-      'label' => 'ニュース',
-      'public' => true,
-      'has_archive' => true,
-      'show_in_rest' => true,
-      'menu_position' => 5,
-      'supports' => array(
-        'title',
-        'editor',
-        'thumbnail',
-        'revisions',
+      'label' => 'ニュース',	// カスタム投稿の名前
+	  'labels' => array(
+        'name' => 'News', // 投稿タイプの一般名
+        'singular_name' => 'news', // この投稿タイプのオブジェクト1個の名前
+      ),
+      'public' => true,		// 利用する場合はtrueに設定
+      'has_archive' => true,	// アーカイブの有効設定
+      'menu_position' => 4,
+      'supports' => array(		// 投稿画面の設定
+        'title',	// タイトル
+        'editor',	// 記事エディタ
+        'thumbnail',// サムネイル
+        'revisions',// リビジョン
       ),
     )
   );
@@ -50,7 +53,6 @@ function create_post_type() {
       'label' => 'カテゴリー',
       'hierarchical' => true,
       'public' => true,
-      'show_in_rest' => true,
     )
   );
 
@@ -61,7 +63,6 @@ function create_post_type() {
       'label' => 'タグ',
       'hierarchical' => false,
       'public' => true,
-      'show_in_rest' => true,
       'update_count_callback' => '_update_post_term_count',
     )
   );
