@@ -1,7 +1,7 @@
 <?php
 /*
 【 管理画面上で固定ページに適用するテンプレートページ名 】
-Template Name: news 一覧 ページ
+Template Name: blog 一覧 ページ
 */
 ?>
 
@@ -17,7 +17,7 @@ Template Name: news 一覧 ページ
             <?php
             $args = array(
                 'post_type' => 'post',
-                'category_name' => 'news',
+                'category_name' => 'blog',
                 'posts_per_page' => 3
             );
             $the_query = new WP_Query( $args );
