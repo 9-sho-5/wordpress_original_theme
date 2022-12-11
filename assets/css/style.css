@@ -9651,3 +9651,6 @@ header .header_right .btn:hover a {
 /* 
     テンプレート スタイルシート
 */
+body {
+  overflow: auto;
+}

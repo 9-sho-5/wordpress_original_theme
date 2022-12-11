@@ -6,4 +6,8 @@
 /* 
     テンプレート スタイルシート
 */
-@use './template-post'
+@use './template-post';
+
+body{
+    overflow: auto;
+}
