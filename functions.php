@@ -1,7 +1,7 @@
 <?php
 // 投稿メニュー非表示処理
 function remove_menus(){
-	remove_menu_page( 'edit.php' );		// 投稿メニュー
+	// remove_menu_page( 'edit.php' );		// 投稿メニュー
 	remove_menu_page( 'upload.php' );	// メディア
 }
 // remove_menus()呼び出し
@@ -23,40 +23,50 @@ function add_css_js() {
 // add_scripts()呼び出し
 add_action('wp_enqueue_scripts', 'add_css_js');
 
-/* カスタム投稿 */
-// add_action('init', 'add_custom_post');
-// function add_custom_post() {
+/* ---------- カスタム投稿タイプを追加 ---------- */
+add_action( 'init', 'create_post_type' );
+function create_post_type() {
+  register_post_type(
+    'news',	// カスタム投稿名
+    array(
+      'label' => 'ニュース',	// カスタム投稿の名前
+	  'labels' => array(
+        'name' => 'News', // 投稿タイプの一般名
+        'singular_name' => 'news', // この投稿タイプのオブジェクト1個の名前
+      ),
+      'public' => true,		// 利用する場合はtrueに設定
+      'has_archive' => true,	// アーカイブの有効設定
+      'menu_position' => 4,
+      'supports' => array(		// 投稿画面の設定
+        'title',	// タイトル
+        'editor',	// 記事エディタ
+        'thumbnail',// サムネイル
+        'revisions',// リビジョン
+      ),
+    )
+  );
 
-//   register_post_type(
-//     'services',
-//     array(
-//       'label' => '施策一覧',
-//       'labels' => array(
-//         'name' => '施策一覧', // 投稿タイプの一般名
-//         'singular_name' => '施策', // この投稿タイプのオブジェクト1個の名前
-//       ),
-//       'public' => true,
-//       'has_archive' => true,
-//       'menu_position' => 5,
-//       'supports' => array(
-//         'title',
-//       )
-//     )
-//   );
+  register_taxonomy(
+    'news-cat',
+    'news',
+    array(
+      'label' => 'カテゴリー',
+      'hierarchical' => true,
+      'public' => true,
+    )
+  );
 
-// }
+  register_taxonomy(
+    'news-tag',
+    'news',
+    array(
+      'label' => 'タグ',
+      'hierarchical' => false,
+      'public' => true,
+      'update_count_callback' => '_update_post_term_count',
+    )
+  );
 
-/* タクソノミー */
-// add_action('init', 'create_taxonomy');
-// function create_taxonomy(){
-	
-// 	register_taxonomy(
-// 		'service_cat',  // タクソノミーのスラッグ
-// 		'services', // どの投稿タイプに追加するか
-// 		$args = array(
-//       'label'              => '施策カテゴリ',     // タクソノミー名
-//       'public'             =>  true,              // 公開するかどうか
-//       'hierarchical'       =>  true               // 階層を持たせるかどうか
-//     )
-// 	);
-// }
+}
+// アイキャッチ画像のサポート許可
+add_theme_support('post-thumbnails');
