@@ -24,16 +24,16 @@ Template Name: 投稿 blog 一覧 ページ
             if ( $the_query->have_posts() ) :
             ?>
             <!-- ループ前の開始タグ -->
-            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+            <div class="news_wrap">
+                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                 <!-- 出力したい処理を記述 -->
-                <div class="news_wrap">
                     <div class="news_item mb-15" style="border: 1px solid black;">
                         <p class="title">ニュースタイトル:：<?php the_title(); ?></p>
                         <p>記事内容：<?php the_content(); ?></p>
                         <a href="<?php echo get_permalink(); ?>">詳細ページリンク</a>
                     </div>
-                </div>
-            <?php endwhile; ?>
+                <?php endwhile; ?>
+            </div>
             <!-- ループ後の閉じタグ -->
             <?php endif; wp_reset_postdata(); ?>
 
