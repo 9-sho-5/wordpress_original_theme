@@ -1,7 +1,7 @@
 <?php
 // 投稿メニュー非表示処理
 function remove_menus(){
-	remove_menu_page( 'edit.php' );		// 投稿メニュー
+	// remove_menu_page( 'edit.php' );		// 投稿メニュー
 	remove_menu_page( 'upload.php' );	// メディア
 }
 // remove_menus()呼び出し
