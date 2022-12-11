@@ -9,8 +9,8 @@
         <ul class="header_links">
             <li>
                 <p>
-                    <a href="/2030vision/">
-                        <span>社会価値創造企業とは</span>
+                    <a href="<?php echo esc_url(home_url('/')); ?>"5>
+                        <span>テストリンク</span>
                     </a>
                 </p>
                 <!-- <div class="header_dropdown">
@@ -28,8 +28,8 @@
             </li>
             <li>
                 <p>
-                    <a href="/about/">
-                        <span>企業情報</span>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <span>テストリンク</span>
                     </a>
                 </p>
                 <!-- <div class="header_dropdown">
@@ -67,8 +67,8 @@
             </li>
             <li>
                 <p>
-                    <a href="/service/">
-                        <span>事業紹介</span>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <span>テストリンク</span>
                     </a>
                 </p>
                 <!-- <div class="header_dropdown">
@@ -204,15 +204,15 @@
             </li>
             <li class="no-hover">
                 <p>
-                    <a href="/news/">
-                        <span>お知らせ</span>
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <span>テストリンク</span>
                     </a>
                 </p>
             </li>
             <li class="no-hover">
                 <p>
-                    <a href="/recruit/" target="_blank" rel="noopener noreferrer">
-                        <span>採用情報<i class="fa-solid fa-up-right-from-square"></i></span>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" target="_blank" rel="noopener noreferrer">
+                        <span>テストリンク</span>
                     </a>
                 </p>
             </li>
