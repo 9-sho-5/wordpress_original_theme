@@ -111,10 +111,10 @@
                     <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="" class="icon">
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i class="fa-brands fa-twitter"></i>
                 </a>
                 <a href="" class="icon">
-                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-youtube"></i>
                 </a>
             </div>
         </div>

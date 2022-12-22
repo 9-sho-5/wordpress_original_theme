@@ -227,21 +227,13 @@ footer .icons .icon {
 footer .icons .icon:last-child {
   margin: 0;
 }
-footer .sp-cr {
-  display: none;
-}
 
 @media screen and (max-width: 1024px) {
   footer {
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
     height: auto;
     padding: 32.5px 20px 10px;
-  }
-  footer img {
-    width: 75px;
-    height: 80px;
-    padding-left: 30px;
   }
   footer .links-wrap {
     flex-direction: column;
@@ -307,7 +299,7 @@ footer .sp-cr {
     display: none;
   }
   footer .links-wrap .icons {
-    justify-content: flex-end;
+    justify-content: center;
     gap: 15px;
     width: 100%;
     margin-top: 40px;
