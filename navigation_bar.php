@@ -202,24 +202,24 @@
                     </div>
                 </div> -->
             </li>
-            <li class="no-hover">
+            <li>
                 <p>
                     <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <span>テストリンク</span>
+                        <span>BLOG</span>
                     </a>
                 </p>
             </li>
-            <li class="no-hover">
+            <li>
                 <p>
                     <a href="<?php echo esc_url(home_url('/')); ?>" target="_blank" rel="noopener noreferrer">
-                        <span>テストリンク</span>
+                        <span>NEWS</span>
                     </a>
                 </p>
             </li>
         </ul>
         <div class="btn">
             <a href="<?php echo esc_url(home_url('/contact')); ?>">
-                お問い合わせ
+                CONTACT
             </a>
         </div>
         <div class="ham_menu-wrap">

@@ -80,6 +80,7 @@ header .header_right .btn a {
   line-height: 40px;
   border: 1px solid gray;
   background-color: gray;
+  text-align: center;
   transition: all 0.2s ease-in-out;
 }
 header .header_right .btn:hover a {
