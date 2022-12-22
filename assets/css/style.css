@@ -227,6 +227,9 @@ footer .icons .icon {
 footer .icons .icon:last-child {
   margin: 0;
 }
+footer .sp-cr {
+  display: none;
+}
 
 @media screen and (max-width: 1024px) {
   footer {
