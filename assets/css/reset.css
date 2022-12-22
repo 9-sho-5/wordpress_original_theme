@@ -47,8 +47,8 @@ a:visited,
 a:hover,
 a:active, a:focus {
     color: #222222;
-    outline: none !important;
-    box-shadow: none !important;
+    outline: none;
+    box-shadow: none;
 }
 
 button:focus {

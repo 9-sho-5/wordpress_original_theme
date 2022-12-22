@@ -7,6 +7,18 @@
                 <li class="anime">
                     <a href="<?php echo esc_url(home_url('/')); ?>">リンク</a>
                 </li>
+                <li class="anime">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">リンク</a>
+                </li>
+                <li class="anime">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">リンク</a>
+                </li>
+                <li class="anime">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">リンク</a>
+                </li>
+                <li class="anime">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">リンク</a>
+                </li>
             </ul>
             <ul>
                 <li class="parent-link anime">
@@ -96,10 +108,13 @@
             </ul>
             <div class="icons anime">
                 <a href="" class="icon">
-                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-brands fa-facebook"></i>
                 </a>
                 <a href="" class="icon">
                     <i class="fa-solid fa-location-dot"></i>
+                </a>
+                <a href="" class="icon">
+                    <i class="fa-brands fa-twitter"></i>
                 </a>
             </div>
         </div>
