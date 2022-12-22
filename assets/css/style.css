@@ -321,10 +321,11 @@ footer .copy_right {
   footer .links-wrap .icons .icon {
     margin: 0;
   }
-  footer .sp-cr {
+  footer .copy_right {
     display: block;
     width: 100%;
     padding: 10px 0;
+    color: white;
     font-size: 12px;
     letter-spacing: 0.6px;
     text-align: center;
