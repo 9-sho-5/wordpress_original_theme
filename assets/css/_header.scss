@@ -112,14 +112,6 @@ header{
     width: 55px;
     height: 45px;
 
-    &.pc {
-        display: block;
-    }
-
-    &.sp {
-        display: none;
-    }
-
     .ham_menu {
         position: relative;
         display: block;
@@ -197,37 +189,6 @@ header{
         .links-wrap {
             height: fit-content;
             padding: 125px 0 160px;
-
-            &.col-6 {
-                gap: 25px;
-
-                .link {
-                    width: 100%;
-                    max-width: 265px;
-
-                    &.mt-spacer {
-                        margin-top: 47px;
-                    }
-
-                    p {
-                        margin-bottom: 20px;
-                    }
-
-                    ul {
-                        margin-bottom: 48px;
-
-                        li {
-                            width: 95%;
-                            margin-left: auto;
-
-                            &.mr-auto {
-                                width: 100%;
-                                margin: 0 auto 10px 0;
-                            }
-                        }
-                    }
-                }
-            }
         }
     }
 }

@@ -96,12 +96,6 @@ header .header_right .btn:hover a {
   width: 55px;
   height: 45px;
 }
-.ham_menu-wrap.pc {
-  display: block;
-}
-.ham_menu-wrap.sp {
-  display: none;
-}
 .ham_menu-wrap .ham_menu {
   position: relative;
   display: block;
@@ -168,30 +162,6 @@ header .header_right .btn:hover a {
 .ham_menu-wrap .window-fixed .links-wrap {
   height: fit-content;
   padding: 125px 0 160px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 {
-  gap: 25px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link {
-  width: 100%;
-  max-width: 265px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link.mt-spacer {
-  margin-top: 47px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link p {
-  margin-bottom: 20px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link ul {
-  margin-bottom: 48px;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link ul li {
-  width: 95%;
-  margin-left: auto;
-}
-.ham_menu-wrap .window-fixed .links-wrap.col-6 .link ul li.mr-auto {
-  width: 100%;
-  margin: 0 auto 10px 0;
 }
 
 .mt-0 {
