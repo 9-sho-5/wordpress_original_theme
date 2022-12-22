@@ -204,18 +204,26 @@
             </li>
             <li>
                 <p>
-                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                    <a href="<?php echo esc_url(home_url('/blog')); ?>">
                         <span>BLOG</span>
                     </a>
                 </p>
             </li>
             <li>
                 <p>
-                    <a href="<?php echo esc_url(home_url('/')); ?>" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo esc_url(home_url('/news')); ?>" target="_blank" rel="noopener noreferrer">
                         <span>NEWS</span>
                     </a>
                 </p>
             </li>
+            <!-- 別タブリンク -->
+            <!-- <li>
+                <p>
+                    <a href="" target="_blank" rel="noopener noreferrer">
+                        <span>別タブ</span>
+                    </a>
+                </p>
+            </li> -->
         </ul>
         <div class="btn">
             <a href="<?php echo esc_url(home_url('/contact')); ?>">
