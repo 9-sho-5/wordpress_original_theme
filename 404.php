@@ -1,7 +1,7 @@
 <?php
 /*
 【 管理画面上で固定ページに適用するテンプレートページ名 】
-Template Name: 404 Not Found ページ
+Template Name: 【固定ページ】404 Not Found ページ
 */
 ?>
 
