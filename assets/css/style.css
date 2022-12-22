@@ -193,20 +193,18 @@ footer .links-wrap ul li.sub-link {
 }
 footer .links-wrap ul li.sub-link a {
   position: relative;
-  padding-left: 10px;
+  padding-left: 20px;
   font-size: 13px;
   letter-spacing: 0.65px;
 }
 footer .links-wrap ul li.sub-link a::before {
-  content: "";
+  content: "-";
   position: absolute;
   top: 50%;
-  left: 3px;
+  left: 5px;
   transform: translateY(-50%);
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background-color: #3B4967;
+  display: block;
+  font-size: 12px;
 }
 footer .icons {
   display: flex;
@@ -283,7 +281,7 @@ footer .sp-cr {
     transition: all 0.4s ease-in-out;
   }
   footer .links-wrap ul li.sub-link a {
-    padding-left: 40px;
+    padding-left: 45px;
   }
   footer .links-wrap ul li.sub-link a::before {
     left: 33px;
@@ -291,7 +289,7 @@ footer .sp-cr {
   footer .links-wrap ul li a {
     position: relative;
     z-index: 1;
-    padding: 13.5px 30px 13.5px 30px;
+    padding: 13.5px 30px 13.5px 20px;
     font-size: 15px;
     letter-spacing: 0.75px;
     cursor: pointer;
