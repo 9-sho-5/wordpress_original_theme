@@ -198,13 +198,18 @@ header{
 @media screen and (max-width: 1024px) {
     header{
         .header_left {
+            padding-left: 20px;
             img {
                 width: 210px;
             }
         }
         .header_right {
+            padding-right: 20px;
             .header_links, .btn{
                 display: none;
+            }
+            .ham_menu-wrap{
+                right: 10px;
             }
         }
     }
