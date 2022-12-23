@@ -211,7 +211,7 @@
             </li>
             <li>
                 <p>
-                    <a href="<?php echo esc_url(home_url('/news')); ?>" target="_blank" rel="noopener noreferrer">
+                    <a href="<?php echo esc_url(home_url('/news')); ?>">
                         <span>NEWS</span>
                     </a>
                 </p>
