@@ -1,7 +1,7 @@
 <?php
 /*
 【 管理画面上で固定ページに適用するテンプレートページ名 】
-Template Name: カスタム投稿 News 詳細ページ
+Template Name: 【カスタム投稿】News：詳細ページ
 */
 ?>
 

@@ -11,6 +11,9 @@
 
     <link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/./assets/images/favicon.ico" type="image/x-icon">
 
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/6df94479af.js" crossorigin="anonymous"></script>
+
     <!-- ogp -->
     <meta property="og:url" content="<?php echo get_the_permalink(); ?>" />
 	<meta property="og:type" content="article" />

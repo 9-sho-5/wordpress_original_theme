@@ -27,7 +27,7 @@ header{
         align-items: center;
         width: 100%;
         height: 90px;
-        padding-right: 80px;
+        padding-right: 30px;
 
         .header_links {
             display: flex;
@@ -93,6 +93,7 @@ header{
                 line-height: 40px;
                 border: 1px solid gray;
                 background-color: gray;
+                text-align: center;
                 transition: all 0.2s ease-in-out;
             }
 
@@ -103,22 +104,16 @@ header{
         }
     }
 }
+// ハンバーガーメニュー
 .ham_menu-wrap {
     position: fixed;
     top: 22.5px;
     right: 25px;
     z-index: 999;
-    display: block;
+    // 1280px 以上は表示しない
+    display: none;
     width: 55px;
     height: 45px;
-
-    &.pc {
-        display: block;
-    }
-
-    &.sp {
-        display: none;
-    }
 
     .ham_menu {
         position: relative;
@@ -197,37 +192,28 @@ header{
         .links-wrap {
             height: fit-content;
             padding: 125px 0 160px;
-
-            &.col-6 {
-                gap: 25px;
-
-                .link {
-                    width: 100%;
-                    max-width: 265px;
-
-                    &.mt-spacer {
-                        margin-top: 47px;
-                    }
-
-                    p {
-                        margin-bottom: 20px;
-                    }
-
-                    ul {
-                        margin-bottom: 48px;
-
-                        li {
-                            width: 95%;
-                            margin-left: auto;
-
-                            &.mr-auto {
-                                width: 100%;
-                                margin: 0 auto 10px 0;
-                            }
-                        }
-                    }
-                }
+        }
+    }
+}
+@media screen and (max-width: 1024px) {
+    header{
+        .header_left {
+            padding-left: 20px;
+            img {
+                width: 210px;
             }
         }
+        .header_right {
+            padding-right: 20px;
+            .header_links, .btn{
+                display: none;
+            }
+            .ham_menu-wrap{
+                right: 10px;
+            }
+        }
+    }
+    .ham_menu-wrap {
+        display: block;
     }
 }
