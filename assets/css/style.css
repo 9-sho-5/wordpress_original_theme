@@ -177,10 +177,6 @@ header .header_right .btn:hover a {
   }
 }
 footer {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  gap: 230px;
   height: auto;
   padding: 90px 40px 50px 40px;
   background-color: gray;
@@ -240,7 +236,12 @@ footer .icons .icon:last-child {
   margin: 0;
 }
 footer .copy_right {
-  display: none;
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  text-align: center;
 }
 
 @media screen and (max-width: 1024px) {
@@ -323,13 +324,8 @@ footer .copy_right {
     margin: 0;
   }
   footer .copy_right {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    color: white;
     font-size: 12px;
     letter-spacing: 0.6px;
-    text-align: center;
   }
 }
 .mt-0 {
