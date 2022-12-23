@@ -1,5 +1,5 @@
     <!-- footer デザイン① -->
-    <!-- <footer>
+    <footer>
         <div class="links-wrap">
             <ul>
                 <li class="anime">
@@ -120,10 +120,10 @@
             </div>
         </div>
         <p class="copy_right pt-50 py-lg-30 anime">©SAMPLE COMPANY. ALL RIGHT RESERVED.</p>
-    </footer> -->
+    </footer>
 
     <!-- footer デザイン② -->
-    <footer>
+    <!-- <footer>
         <div class="footer_body">
             <div class="inc_info">
                 <p class="inc_name">
@@ -181,7 +181,67 @@
             </div>
         </div>
         <p class="copy_right pt-50 py-lg-30 anime">©SAMPLE COMPANY. ALL RIGHT RESERVED.</p>
-    </footer>
+    </footer> -->
+
+    <!-- footer デザイン③ -->
+    <!-- <footer>
+        <div class="footer_body">
+            <div class="inc_info">
+                <p class="lead_text mb-15 mb-md-25">TEXTTEXTTEXTTEXTTEXTTEXTTEXTTEXT</p>
+                <p class="inc_name">
+                    SAMPLE<br>
+                    COMPANY
+                </p>
+            </div>
+            <div class="links-wrap">
+                <ul>
+                    <li class="parent-link anime">
+                        <a>SITEMAP</a>
+                    </li>
+                    <ul class="sub-link-wrap">
+                        <li class="sub-link anime">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">サブリンク</a>
+                        </li>
+                        <li class="sub-link anime">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">サブリンク</a>
+                        </li>
+                        <li class="sub-link anime">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">サブリンク</a>
+                        </li>
+                        <li class="sub-link anime">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">サブリンク</a>
+                        </li>
+                        <li class="sub-link anime">
+                            <a href="<?php echo esc_url(home_url('/')); ?>">サブリンク</a>
+                        </li>
+                    </ul>
+                </ul>
+                <ul>
+                    <li class="anime">
+                        <a href="<?php echo esc_url(home_url('/')); ?>">BLOG</a>
+                    </li>
+                    <li class="anime">
+                        <a href="<?php echo esc_url(home_url('/')); ?>">NEWS</a>
+                    </li>
+                    <li class="anime">
+                        <a href="<?php echo esc_url(home_url('/')); ?>">MEDIA</a>
+                    </li>
+                </ul>
+                <div class="btn_wrap mt-lg-60 mt-md-40">
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn bg_burlywood">
+                        <i class="fa-solid fa-circle-info"></i>INFO
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn bg_orange">
+                        <i class="fa-solid fa-phone"></i>TEL
+                    </a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>" class="btn bg_black">
+                        CONTACT
+                    </a>
+                </div>
+            </div>
+        </div>
+        <p class="copy_right pt-50 py-lg-30 anime">©SAMPLE COMPANY. ALL RIGHT RESERVED.</p>
+    </footer> -->
     <?php wp_footer(); ?>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="<?php echo get_template_directory_uri() ?>/./assets/js/main.js"></script>
