@@ -30,13 +30,13 @@ function create_post_type() {
     'news',	// カスタム投稿名
     array(
       'label' => 'ニュース',	// カスタム投稿の名前
-	  'labels' => array(
+	    'labels' => array(
         'name' => 'News', // 投稿タイプの一般名
         'singular_name' => 'news', // この投稿タイプのオブジェクト1個の名前
       ),
       'public' => true,		// 利用する場合はtrueに設定
       'has_archive' => true,	// アーカイブの有効設定
-      'menu_position' => 4,
+      'menu_position' => 4,   // 管理画面のサイドバーでの表示位置指定
       'supports' => array(		// 投稿画面の設定
         'title',	// タイトル
         'editor',	// 記事エディタ
