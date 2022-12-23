@@ -229,20 +229,20 @@ footer .links-wrap ul li.sub-link a::before {
 footer .icons {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 35px;
   margin: 0;
 }
 footer .icons i {
   color: white;
 }
 footer .icons .icon {
-  width: 35px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   border-radius: 50%;
   background: gray;
   box-shadow: 5px 5px 20px #5c5c5c, -5px -5px 20px gray;
   text-align: center;
-  line-height: 35px;
+  line-height: 45px;
 }
 footer .icons .icon:last-child {
   margin: 0;
@@ -408,19 +408,19 @@ footer{
     .icons{
         display: flex;
         align-items: flex-start;
-        gap: 15px;
+        gap: 35px;
         margin: 0;
         i{
             color: white;
         }
         .icon{
-            width: 35px;
-            height: 35px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             background: gray;
             box-shadow:  5px 5px 20px #5c5c5c, -5px -5px 20px gray;
             text-align: center;
-            line-height: 35px;
+            line-height: 45px;
             &:last-child{
                 margin: 0;
             }
