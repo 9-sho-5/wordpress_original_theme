@@ -1,6 +1,7 @@
 # wordpress_original_theme
 
-## 初期設定 【WordPress側】
+## 初期設定
+### 【WordPress環境】
 
 - 言語設定
 
@@ -19,3 +20,23 @@
 - 投稿の設定
 
 「設定」 → 「パーマリンク」 → 「何もせず、変更を保存」
+
+### 【開発環境】
+
+#### git cloneでテーマファイルのみ取得する
+‘‘‘
+% git clone
+% cd wordpress_original_theme
+% git remote rm origin
+% git remote add origin <github url>
+‘‘‘
+
+#### Local Sitesを使用した開発環境
+こちらのshell scriptを任意の場所にダウンロード
+
+‘‘‘
+
+‘‘‘
+
+### functions.php
+
