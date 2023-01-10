@@ -34,7 +34,7 @@
 #### Local Sitesを使用した開発環境
 こちらのshell scriptを任意の場所にダウンロード
 
-[コマンドで１つでWordPress環境構築する]: https://github.com/9-sho-5/set_up_wordpress_env
+[コマンドで１つでWordPress環境構築する](https://github.com/9-sho-5/set_up_wordpress_env)
 
 ### functions.php
 
