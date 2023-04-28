@@ -7,6 +7,9 @@ function remove_menus(){
 // remove_menus()呼び出し
 add_action( 'admin_menu', 'remove_menus' );
 
+// 管理画面の非表示をデフォルトに設定
+add_filter( 'show_admin_bar', '__return_false' );
+
 // functions.phpからのCSSの読み込み処理
 function add_css_js() {
 	// CSSの読み込み
