@@ -22,9 +22,61 @@ function add_css_js() {
 	*/
 	// wp_enqueue_script('main', get_template_directory_uri().'/assets/javascript/main.js');	// メインJavaScriptの読み込み
 }
-
 // add_scripts()呼び出し
 add_action('wp_enqueue_scripts', 'add_css_js');
+
+//-----------------------------------------------------
+// 固定ページを自動生成する方法
+//-----------------------------------------------------
+function create_pages_and_setting() {
+  // 作成したい固定ページのタイトル名・スラッグを入れる。
+    $pages_array = [
+      array('title'=>'トップページ', 'name'=>'top-page', 'parent'=>''),
+      array('title'=>'会社概要', 'name'=>'about-us', 'parent'=>''),
+      array('title'=>'お問い合わせフォーム', 'name'=>'contact', 'parent'=>''),
+      array('title'=>'ニュース一覧', 'name'=>'news', 'parent'=>''),
+      array('title'=>'ブログ一覧', 'name'=>'blog', 'parent'=>''),
+    ];
+    foreach ($pages_array as $value) {
+        setting_pages($value);
+    }
+}
+  
+function setting_pages( $val ) {    
+    //親ページ判別
+    if(!empty($val['parent'])){
+        $parent_id = get_page_by_path($val['parent']);
+        $parent_id = $parent_id->ID;
+        $page_slug = $val['parent'] . "/" . $val['name'];
+    }else{
+        $parent_id = "";
+        $page_slug =$val['name'];
+    }
+    if ( empty(get_page_by_path( $page_slug ))) {
+        //固定ページがなければ作成
+        $insert_id = wp_insert_post(
+            array(
+                'post_title'   => $val['title'],
+                'post_name'    => $val['name'],
+                'post_status'  => 'publish',
+                'post_type'    => 'page',
+                'post_parent'  => $parent_id,
+                'post_content' => '',
+            )
+        );
+    }else{
+        //固定ページがすでにあれば更新
+        $page_obj = get_page_by_path( $page_slug );
+        $page_id = $page_obj->ID;
+        $base_post = array(
+            'ID'           => $page_id,
+            'post_title'   => $val['title'],
+            'post_name'    => $val['name'],
+        );
+        wp_update_post( $base_post );
+    }
+}
+add_action('after_setup_theme', 'create_pages_and_setting');
 
 /* ---------- カスタム投稿タイプを追加 ---------- */
 add_action( 'init', 'create_post_type' );
@@ -71,5 +123,6 @@ function create_post_type() {
   );
 
 }
+
 // アイキャッチ画像のサポート許可
 add_theme_support('post-thumbnails');
