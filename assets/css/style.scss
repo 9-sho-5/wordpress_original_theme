@@ -1,13 +1,13 @@
-@use './header';
-@use './main';
-@use './footer';
-@use './spacer';
+@use "./header";
+@use "./main";
+@use "./footer";
+@use "./spacer";
 
-/* 
+/*
     テンプレート スタイルシート
 */
-@use './template-post';
+@use "./template-post";
 
-body{
-    overflow: auto;
+body {
+  overflow: auto;
 }

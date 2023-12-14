@@ -9,7 +9,6 @@
 
 <!-- レスポンシブ -->
 <style>
-    /* 指定のpx以下のスタイリング */
-    @media screen and (max-width: 〇〇px) {
-    }
+  /* 指定のpx以下のスタイリング */
+  @media screen and (max-width: 〇〇px) {}
 </style>

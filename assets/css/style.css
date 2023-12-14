@@ -19,7 +19,8 @@ header .header_left {
 header .header_left img {
   width: 320px;
   height: 40px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 header .header_right {
   display: flex;
@@ -147,6 +148,7 @@ header .header_right .btn:hover a {
   transform: translateX(100%);
   opacity: 0;
   width: 100%;
+  height: -moz-fit-content;
   height: fit-content;
   z-index: 1;
   pointer-events: none;
@@ -161,6 +163,7 @@ header .header_right .btn:hover a {
   background-color: lightblue;
 }
 .ham_menu-wrap .window-fixed .links-wrap {
+  height: -moz-fit-content;
   height: fit-content;
   padding: 125px 0 160px;
 }
@@ -175,7 +178,8 @@ header .header_right .btn:hover a {
   header .header_right {
     padding-right: 20px;
   }
-  header .header_right .header_links, header .header_right .btn {
+  header .header_right .header_links,
+  header .header_right .btn {
     display: none;
   }
   header .header_right .ham_menu-wrap {
@@ -200,6 +204,7 @@ footer .links-wrap {
   width: 100%;
 }
 footer .links-wrap ul li {
+  width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 20px;
 }
@@ -283,8 +288,8 @@ footer .copy_right {
     top: 50%;
     width: 7px;
     height: 7px;
-    border-top: 1px solid #3B4967;
-    border-right: 1px solid #3B4967;
+    border-top: 1px solid #3b4967;
+    border-right: 1px solid #3b4967;
     transform: rotate(45deg) translateY(-50%);
     z-index: 0;
   }
@@ -10197,6 +10202,9 @@ footer{
     font-size: 50px !important;
   }
 }
+/*
+    テンプレート スタイルシート
+*/
 .news_wrap {
   width: 70%;
   margin: 0 auto;
@@ -10218,9 +10226,6 @@ footer{
   background-color: skyblue;
 }
 
-/* 
-    テンプレート スタイルシート
-*/
 body {
   overflow: auto;
 }
